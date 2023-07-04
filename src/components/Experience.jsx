@@ -7,11 +7,15 @@ import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constants';
 import SectionWrapper from './SectionWrapper';
 import SectionHeader from './SectionHeader';
+import Chip from './chip';
 
 function ExperienceCard({ experience }) {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: '#1d1836', color: '#ffffff' }}
+      contentStyle={{
+        background: '#1d1836',
+        color: '#ffffff',
+      }}
       contentArrowStyle={{ borderRight: '7px solid #232631' }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
@@ -31,16 +35,16 @@ function ExperienceCard({ experience }) {
           {experience.company_name}
         </p>
       </div>
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <div className="flex flex-wrap">
         {experience.points.map((point, index) => (
-          <li
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+          <Chip
+            // className="text-white-100 text-[14px] pl-1 tracking-wider"
             key={index}
           >
             {point}
-          </li>
+          </Chip>
         ))}
-      </ul>
+      </div>
     </VerticalTimelineElement>
   );
 }
@@ -48,10 +52,7 @@ function ExperienceCard({ experience }) {
 function Experience() {
   return (
     <SectionWrapper sectionId="experience">
-      <SectionHeader
-        headerText="Work Experience"
-        subText="What I have done so far"
-      />
+      <SectionHeader headerText="Experience" subText="Places I've worked" />
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (

@@ -32,17 +32,24 @@ function ServiceCard({ title, index, icon }) {
 function About() {
   return (
     <SectionWrapper sectionId="about">
-      <SectionHeader headerText="Overview" subText="Introduction" />
+      <SectionHeader headerText="A Bit About Me" subText="hello_me.js" />
       <motion.p
         className="mt-4 text-secondary text-base max-w-3xl leading-[30px]"
         variants={fadeIn(', ', 0.1, 1)}
       >
-        This is some text about my experience. This is some text about my
-        experience. This is some text about my experience. This is some text
-        about my experience. This is some text about my experience. This is some
-        text about my experience. This is some text about my experience. This is
-        some text about my experience. This is some text about my experience.
-        This is some text about my experience.
+        <p>
+          I'm a product-focused lead frontend engineer with 9 years of
+          engineering experience in strategic problem-solving that allows me to
+          tackle any problem I'm faced with. I have a passion for frontend
+          engineering and experience designing, developing, and deploying
+          frontend microservices using Figma, React, and AWS.
+        </p>
+        <br />
+        In my free time, I volunteer at Out In Tech. OIT is a non-profit that
+        unites the LGBTQ+ tech community by creating opportunities for its
+        members to advance their careers and grow their professional networks.
+        I'm a part of the UI/UX leadership team and the solutions architect for
+        the OIT Connect app.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
